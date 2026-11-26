@@ -1,0 +1,107 @@
+/* Kestrel Valley — Air Rally: page dressing. The game fills the window; the panel is a
+   smoked-glass card that carries the title, the tally and the bad news. */
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #10151d;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #f4f7fa;
+}
+
+#game, #hud {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#hud {
+  pointer-events: none;
+}
+
+#panel {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#panel .card {
+  max-width: 560px;
+  width: calc(100% - 64px);
+  background: rgba(10, 14, 20, 0.78);
+  border: 1px solid rgba(255, 196, 107, 0.45);
+  border-radius: 14px;
+  padding: 28px 34px;
+  text-align: center;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
+}
+
+#panel h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 0.14em;
+  color: #ffc46b;
+}
+
+#panel h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #ffc46b;
+}
+
+#panel .sub {
+  margin: 2px 0 14px;
+  letter-spacing: 0.5em;
+  color: #8fe3ff;
+  font-size: 13px;
+}
+
+#panel p {
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+#panel .keys {
+  margin: 14px auto;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+#panel .keys td {
+  padding: 3px 10px;
+  text-align: left;
+}
+
+#panel .keys td:nth-child(odd) {
+  color: #ffc46b;
+  font-weight: 600;
+  text-align: right;
+}
+
+#panel .line {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-size: 15.5px;
+}
+
+#panel .line.total {
+  border-top: 1px solid rgba(255, 196, 107, 0.45);
+  padding-top: 8px;
+  font-size: 18px;
+  color: #ffc46b;
+}
+
+#panel .go {
+  margin-top: 16px;
+  color: #8fe3ff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
